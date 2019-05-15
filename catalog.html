@@ -81,6 +81,19 @@
             </div>
             <form action="#" method="GET" class="catalog__filter">
               <fieldset class="catalog__filter-block">
+                <legend class="catalog__filter-block-title">Цена:</legend>
+                <div class="double-range">
+                  <div class="double-range__range">
+                    <input type="range" name="#" min="0" max="99999">
+                  </div>
+                  <div class="double-range__inputs">
+                    <input type="text" name="#" class="double-range__inputs-item double-range__inputs-item_min">
+                    -
+                    <input type="text" name="#" class="double-range__inputs-item double-range__inputs-item_max">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="catalog__filter-block">
                 <legend class="catalog__filter-block-title">Производители:</legend>
                 <label class="catalog__filter-item">
                   <input type="checkbox" name="manufacturer[]" checked>BOSCH
@@ -257,10 +270,29 @@
                     class="catalog__goods-item-actions-item">Купить</a><a href="#"
                     class="catalog__goods-item-actions-item">В закладки</a></div>
               </article>
+              <ul class="catalog__pagination">
+                <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-item-link">1</a></li>
+                <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-item-link">2</a></li>
+                <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-item-link">3</a></li>
+                <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-item-link">Следующая</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
+    </div>
+    <div class="site-block site-block_theme_gray">
+      <aside>
+        <section>
+          <h3>Пара слов о перфораторах</h3>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+            кирпиче, бетоне и камне.
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+            дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном
+            устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+        </section>
+      </aside>
     </div>
   </main>
   <footer class="main-footer">

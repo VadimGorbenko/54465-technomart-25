@@ -347,6 +347,33 @@
       </p>
     </div>
   </footer>
+  <div class="popup js-full-map">
+    <button class="popup__close" type="button">Закрыть</button>
+    <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+  </div>
+  <div class="popup js-contacts">
+    <button class="popup__close" type="button">Закрыть</button>
+    <div class="popup__body">
+      <form action="#" method="POST" class="popup-form contacts-form">
+        <label class="contacts-form__label">
+          Ваше имя:
+          <input type="text" name="fio" placeholder="Имя Фамилия">
+        </label>
+        <label class="contacts-form__label">
+          Ваш e-mail:
+          <input type="email" name="email" placeholder="email@example.com"
+            pattern="[A-aZ-z]{1,}[@][A-aZ-z]{1,}[.][A-aZ-z]{1,}" required>
+        </label>
+        <label class="contacts-form__label">
+          Текст письма:
+          <textarea name="message" cols="30" rows="10"></textarea>
+        </label>
+        <div class="popup-form__footer">
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>

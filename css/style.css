@@ -105,17 +105,42 @@ a {
   background-color: #ee3643;
 }
 
-.main-nav {
-  background-color: #32425c;
-  color: white;
+.logo:hover,
+.logo:active {
+  background-color: #ca2c37;
 }
 
-.main-nav__list-item a {
-  color: inherit;
+.top-line__item:hover {
+  background-color: #212a3a;
+}
+
+.top-line__item:not(.search-form):active {
+  background-color: #161d29;
+  color: #8b8e94;
+}
+
+.search-form__input {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.search-form__input:focus {
+  background-color: white;
+  outline: none;
+  color: black;
 }
 
 .checkout {
   background-color: #63a63e;
+}
+
+.checkout:hover {
+  background-color: #5fbb2d;
+}
+
+.checkout:active {
+  background-color: #518534;
+  color: #8b8e94;
 }
 
 .top-line {
@@ -146,12 +171,34 @@ a {
   color: inherit;
 }
 
+.login a:hover,
+.logged-in__user-links a:hover {
+  color: #ee3643;
+}
+
+.login a:active,
+.logged-in__user-links a:active,
+.logged-in__user-profile:active,
+.main-nav__list-item a:active {
+  color: #8b8e94;
+}
+
 .main-nav {
+  background-color: #32425c;
   color: white;
+  border-bottom: 5px solid #293449;
 }
 
 .main-nav a {
   color: inherit;
+}
+
+.main-nav__list-item a {
+  color: inherit;
+}
+
+.main-nav__list-item a:hover {
+  background-color: #293449;
 }
 
 .site-title {

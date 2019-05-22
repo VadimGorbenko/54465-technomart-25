@@ -79,19 +79,19 @@
             <div class="catalog__content-item__head">
               <h3 class="catalog__filters-title">Фильтр:</h3>
             </div>
-            <form action="#" method="GET" class="catalog__filter">
+            <form action="https://echo.htmlacademy.ru" method="GET" class="catalog__filter">
               <fieldset class="catalog__filter-block">
                 <legend class="catalog__filter-block-title">Цена:</legend>
                 <div class="double-range">
                   <div class="double-range__range">
-                    <input type="range" name="price" min="0" max="99999">
+                    <input type="range" name="price" min="0" max="99999" value="30000">
                   </div>
                   <div class="double-range__inputs">
-                    <input type="text" name="price__min"
-                      class="double-range__inputs-item double-range__inputs-item_min">
+                    <input type="text" name="price__min" class="double-range__inputs-item double-range__inputs-item_min"
+                      placeholder="От" value="0" aria-label="Цена от">
                     -
-                    <input type="text" name="price__max"
-                      class="double-range__inputs-item double-range__inputs-item_max">
+                    <input type="text" name="price__max" class="double-range__inputs-item double-range__inputs-item_max"
+                      placeholder="До" value="30000" aria-label="Цена до">
                   </div>
                 </div>
               </fieldset>

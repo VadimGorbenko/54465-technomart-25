@@ -1,49 +1,49 @@
 /* Cuprum @font-face */
 @font-face {
-  font-family: 'cuprum';
-  src: url('../fonts/cuprum.woff') format('woff'),
-    url('../fonts/cuprum.woff2') format('woff2');
+  font-family: "cuprum";
+  src: url("../fonts/cuprum.woff") format("woff"),
+    url("../fonts/cuprum.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'cuprum';
-  src: url('../fonts/cuprumbold.woff') format('woff'),
-    url('../fonts/cuprumbold.woff2') format('woff2');
+  font-family: "cuprum";
+  src: url("../fonts/cuprumbold.woff") format("woff"),
+    url("../fonts/cuprumbold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'cuprum';
-  src: url('../fonts/cuprumitalic.woff') format('woff'),
-    url('../fonts/cuprumitalic.woff2') format('woff2');
+  font-family: "cuprum";
+  src: url("../fonts/cuprumitalic.woff") format("woff"),
+    url("../fonts/cuprumitalic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'cuprum';
-  src: url('../fonts/cuprumbolditalic.woff') format('woff'),
-    url('../fonts/cuprumbolditalic.woff2') format('woff2');
+  font-family: "cuprum";
+  src: url("../fonts/cuprumbolditalic.woff") format("woff"),
+    url("../fonts/cuprumbolditalic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
 }
 
 /* PTSans @font-face */
 @font-face {
-  font-family: 'ptsans';
-  src: url('../fonts/ptsans.woff') format('woff'),
-    url('../fonts/ptsans.woff2') format('woff2');
+  font-family: "ptsans";
+  src: url("../fonts/ptsans.woff") format("woff"),
+    url("../fonts/ptsans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ptsans';
-  src: url('../fonts/ptsansbold.woff') format('woff'),
-    url('../fonts/ptsansbold.woff2') format('woff2');
+  font-family: "ptsans";
+  src: url("../fonts/ptsansbold.woff") format("woff"),
+    url("../fonts/ptsansbold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -80,13 +80,13 @@ a {
 
 .list {
   font-size: 18px;
-  font-family: 'cuprum';
+  font-family: "cuprum";
   line-height: 1.15;
 }
 
 .btn {
   text-transform: uppercase;
-  font-family: 'cuprum';
+  font-family: "cuprum";
   font-size: 14px;
 }
 
@@ -163,7 +163,7 @@ a {
 }
 
 .login {
-  color: black
+  color: black;
 }
 
 .login a {
@@ -204,7 +204,7 @@ a {
 .site-title {
   font-weight: normal;
   text-transform: uppercase;
-  font-family: 'cuprum';
+  font-family: "cuprum";
   line-height: 1.15;
 }
 
@@ -214,7 +214,7 @@ a {
 
 .about,
 .contacts {
-  font-family: 'PTSans';
+  font-family: "PTSans";
   font-size: 13px;
   line-height: 1.85;
 }
@@ -298,7 +298,7 @@ a {
 }
 
 .catalog__filter {
-  font-family: 'PTsans';
+  font-family: "PTsans";
   font-size: 15px;
 }
 
@@ -314,7 +314,7 @@ a {
 }
 
 .catalog__goods-content {
-  font-family: 'PTsans';
+  font-family: "PTsans";
 }
 
 .catalog__goods-item-title a {
@@ -343,16 +343,37 @@ a {
 
 .catalog__goods-item-actions {
   text-transform: uppercase;
-  font-family: 'cuprum';
+  font-family: "cuprum";
   font-size: 14px;
 }
 
 .catalog__goods-item-actions-buу {
-  background-color: #63a63e;
+  background-color: #5fbb2d;
   color: white;
 }
 
+.catalog__goods-item-actions-buу:hover {
+  background-color: #63a63e;
+}
+
+.catalog__goods-item-actions-buу:active {
+  background-color: #518534;
+}
 
 .catalog__goods-item-actions-mark {
   color: #32425c;
+}
+
+.main-footer-nav a:hover,
+.main-footer__copyright-item a:hover {
+  text-decoration: underline;
+}
+.main-footer-nav a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.main-footer__copyright-item a:active {
+  text-decoration: none;
+  color: #ee3643;
 }

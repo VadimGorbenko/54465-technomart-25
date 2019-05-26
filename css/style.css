@@ -84,6 +84,8 @@ a {
 .row {
   margin: 0 -10px;
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .row.no-gutters {
@@ -149,6 +151,10 @@ a {
   width: 8.333%;
 }
 
+.col-offest-1 {
+  margin-left: 8.333%
+}
+
 .gold {
   color: #ffd180;
 }
@@ -161,6 +167,12 @@ a {
 .breadcrumbs {
   font-family: "PTSans";
   font-size: 13px;
+  display: flex;
+  list-style-type: none;
+}
+
+.breadcrumbs__item {
+  margin: 0 10px;
 }
 
 .breadcrumbs a {
@@ -278,13 +290,18 @@ a {
 }
 
 .main-nav {
-  background-color: #32425c;
   color: white;
-  border-bottom: 5px solid #293449;
 }
 
 .main-nav a {
   color: inherit;
+}
+
+.main-nav__list {
+  background-color: #32425c;
+  border-bottom: 5px solid #293449;
+  display: flex;
+  justify-content: space-around;
 }
 
 .main-nav__list-item a {
@@ -321,6 +338,17 @@ a {
 .main-footer-nav {
   font-size: 18px;
   color: inherit;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-footer-nav__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.main-footer-nav__list-item {
+  margin: 0 10px;
 }
 
 .main-footer-nav a {
@@ -370,6 +398,11 @@ a {
   color: #32425c;
   font-size: 30px;
   background-color: #f2f6f8;
+}
+
+.catalog__filter-block {
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__filter-block-title {

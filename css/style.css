@@ -48,6 +48,7 @@
   font-style: normal;
 }
 
+/* common styles */
 html {
   box-sizing: border-box;
 }
@@ -60,7 +61,11 @@ html {
 
 body {
   font-family: "cuprum";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 
 address {
   font-style: normal;
@@ -70,8 +75,96 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 -10px;
+  display: flex;
+}
+
+.row.no-gutters {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.row.no-gutters .col {
+  padding: 0;
+}
+
+.col {
+  /* display: flex; */
+  padding: 0 10px;
+}
+
+
+.col-12 {
+  width: 100%;
+}
+
+.col-11 {
+  width: 91.666%;
+}
+
+.col-10 {
+  width: 83.333%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-8 {
+  width: 66.666%;
+}
+
+.col-7 {
+  width: 58.333%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-5 {
+  width: 41.666%;
+}
+
+.col-4 {
+  width: 33.333%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 16.666%;
+}
+
+.col-1 {
+  width: 8.333%;
+}
+
 .gold {
   color: #ffd180;
+}
+
+
+.site-block {
+  background-color: white;
+}
+
+.breadcrumbs {
+  font-family: "PTSans";
+  font-size: 13px;
+}
+
+.breadcrumbs a {
+  color: inherit;
 }
 
 .site-block_theme_gray {
@@ -95,6 +188,7 @@ a {
   color: white;
 }
 
+/* common styles end */
 .top-line {
   background-color: #293449;
   color: white;
@@ -272,19 +366,6 @@ a {
   text-decoration: underline;
 }
 
-.site-block {
-  background-color: white;
-}
-
-.breadcrumbs {
-  font-family: "PTSans";
-  font-size: 13px;
-}
-
-.breadcrumbs a {
-  color: inherit;
-}
-
 .catalog__title {
   color: #32425c;
   font-size: 30px;
@@ -368,6 +449,7 @@ a {
 .main-footer__copyright-item a:hover {
   text-decoration: underline;
 }
+
 .main-footer-nav a:active {
   text-decoration: none;
   opacity: 0.5;

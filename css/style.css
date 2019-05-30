@@ -51,7 +51,6 @@
 /* common styles */
 html {
   box-sizing: border-box;
-  height: 100%;
 }
 
 *,
@@ -61,20 +60,12 @@ html {
 }
 
 body {
-  font-family: "cuprum", "Arial", sans-serif;
-  color: black;
-  line-height: 1;
+  font-family: "cuprum";
   display: flex;
-  margin: 0;
   flex-direction: column;
   min-height: 100vh;
-  line-height: 1;
-  font-size: 17px;
 }
 
-.main-footer{
-  margin-top: auto;
-}
 
 address {
   font-style: normal;
@@ -174,9 +165,8 @@ a {
 }
 
 .breadcrumbs {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PTSans";
   font-size: 13px;
-  line-height: 1.384;
   display: flex;
   list-style-type: none;
 }
@@ -195,15 +185,14 @@ a {
 
 .list {
   font-size: 18px;
-  font-family: "cuprum", "Arial", sans-serif;
-  line-height: 1.111;
+  font-family: "cuprum";
+  line-height: 1.15;
 }
 
 .btn {
   text-transform: uppercase;
-  font-family: "cuprum", "Arial", sans-serif;
+  font-family: "cuprum";
   font-size: 14px;
-  line-height: 1.285;
 }
 
 .btn_action {
@@ -215,7 +204,6 @@ a {
 .top-line {
   background-color: #293449;
   color: white;
-  line-height: 1.059;
 }
 
 .logo {
@@ -261,6 +249,10 @@ a {
   color: #8b8e94;
 }
 
+.top-line {
+  color: white;
+}
+
 .top-line a {
   color: inherit;
 }
@@ -268,7 +260,6 @@ a {
 .main-header__title {
   font-style: italic;
   font-size: 16px;
-  line-height: 1.4375;
   color: #ee3643;
 }
 
@@ -324,20 +315,19 @@ a {
 .site-title {
   font-weight: normal;
   text-transform: uppercase;
-  font-family: "cuprum", "Arial", sans-serif;
+  font-family: "cuprum";
   line-height: 1.15;
 }
 
 .secondary-title {
   font-size: 30px;
-  line-height: 1;
 }
 
 .about,
 .contacts {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PTSans";
   font-size: 13px;
-  line-height: 1.846;
+  line-height: 1.85;
 }
 
 .main-footer {
@@ -347,7 +337,6 @@ a {
 
 .main-footer-nav {
   font-size: 18px;
-  line-height: 1.333;
   color: inherit;
   display: flex;
   justify-content: flex-end;
@@ -376,7 +365,6 @@ a {
 
 .main-footer__contacts {
   font-size: 18px;
-  line-height: 1.333;
 }
 
 .main-footer__contacts a {
@@ -399,7 +387,6 @@ a {
 .logged-in__user-links {
   color: #32425c;
   font-size: 16px;
-  line-height: 1.125;
 }
 
 .logged-in__user-links a {
@@ -420,15 +407,13 @@ a {
 
 .catalog__filter-block-title {
   font-size: 17px;
-  line-height: 1.764;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .catalog__filter {
-  font-family: "PTsans", "Arial", sans-serif;
+  font-family: "PTsans";
   font-size: 15px;
-  line-height: 1.333;
 }
 
 .catalog__filter-item {
@@ -437,14 +422,13 @@ a {
 
 .catalog__filter input[type="submit"] {
   font-size: 13px;
-  line-height: 1.384;
   text-transform: uppercase;
   background-color: white;
   border: 1px solid #e5e5e5;
 }
 
 .catalog__goods-content {
-  font-family: "PTsans", "Arial", sans-serif;
+  font-family: "PTsans";
 }
 
 .catalog__goods-item-title a {
@@ -453,7 +437,6 @@ a {
 
 .catalog__goods-item-title {
   font-size: 18px;
-  line-height: 1.111;
   font-weight: bold;
 }
 
@@ -465,32 +448,29 @@ a {
 .price__old {
   color: #999999;
   text-decoration: line-through;
-  line-height: 1.0588;
 }
 
 .price__current {
   background-color: #ee3643;
   color: white;
-  line-height: 1.0588;
 }
 
 .catalog__goods-item-actions {
   text-transform: uppercase;
-  font-family: "cuprum", "Arial", sans-serif;
+  font-family: "cuprum";
   font-size: 14px;
-  line-height: 1.285;
 }
 
-.catalog__goods-item-actions-buÑƒ {
+.catalog__goods-item-actions-buу {
   background-color: #5fbb2d;
   color: white;
 }
 
-.catalog__goods-item-actions-buÑƒ:hover {
+.catalog__goods-item-actions-buу:hover {
   background-color: #63a63e;
 }
 
-.catalog__goods-item-actions-buÑƒ:active {
+.catalog__goods-item-actions-buу:active {
   background-color: #518534;
 }
 
@@ -511,47 +491,4 @@ a {
 .main-footer__copyright-item a:active {
   text-decoration: none;
   color: #ee3643;
-}
-
-.contacts__text {
-  font-size: 14px;
-  line-height: 1.714;
-}
-
-.double-range__inputs-item {
-  font-size: 17px;
-  line-height: 1.0588;
-}
-
-.main-footer__copyright {
-  font-size: 16px;
-  line-height: 1.125;
-}
-
-.general-link__item-title {
-  font-size: 24px;
-  line-height: 1.25;
-}
-
-.general-link__item-clarification {
-  font-size: 14px;
-  line-height: 1.285;
-}
-
-.slider__item-title {
-  font-size: 36px;
-}
-
-.slider__item-subtitle {
-  font-size: 18px;
-  line-height: 1.333;
-}
-
-.slider__common-link {
-  font-size: 14px;
-  line-height: 1.285;
-}
-
-.search-form__input {
-  line-height: 1.059;
 }

@@ -22,18 +22,24 @@
         <!-- </div> -->
         <!-- <div class="col col-3"> -->
         <form action="#" method="GET" class="search-inline">
-          <input type="text" name="search" aria-label="Поиск по сайту" placeholder="Поиск:">
-          <button type="submit">Поиск</button>
+          <input type="text" name="search" class="search-inline__input" aria-label="Поиск по сайту"
+            placeholder="Поиск:">
+          <button type="submit" class="search-inline__submit" aria-label="Поиск">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path fill="#ffffff"
+                d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+              </svg>
+          </button>
         </form>
         <!-- </div> -->
         <!-- <div class="col col-2"> -->
-        <a href="#" class="activity-control link">
+        <a href="#" class="activity-control activity-control_bookmark link">
           <span>Закладки: </span>
           <span>0</span>
         </a>
         <!-- </div> -->
         <!-- <div class="col col-2"> -->
-        <a href="#" class="activity-control link">
+        <a href="#" class="activity-control activity-control_cart link">
           <span>Корзина: </span>
           <span>0</span>
         </a>
@@ -59,8 +65,15 @@
             <address class="site-header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
           <div class="col col-4">
-            <a href="#" class="sign sign-in link">Войти</a>
-            <a href="#" class="sign sign-up link">Регистрация</a>
+            <a href="#" class="sign sign_in link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" class="sign_icon">
+                <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z" />
+                <path fill="#c5c5c5"
+                  d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" />
+                </svg>
+              Войти
+            </a>
+            <a href="#" class="sign sign_up link">Регистрация</a>
           </div>
           <nav class="col col-12 site-header__nav">
             <ul class="site-header__nav-list reseted-list">
@@ -83,19 +96,19 @@
         <h2 class="visually-hidden">Основные направления</h2>
         <div class="row">
           <div class="col col-4">
-            <div class="tile tile_orange">
+            <div class="tile tile_orange tile_materials tile_new">
               <h3 class="tile__title">Материалы</h3>
               <a href="#" class="tile__link link">На любой вкус</a>
             </div>
           </div>
           <div class="col col-4">
-            <div class="tile tile_blue">
+            <div class="tile tile_blue tile_tools">
               <h3 class="tile__title">Инструмент</h3>
               <a href="#" class="tile__link link">На все случаи</a>
             </div>
           </div>
           <div class="col col-4">
-            <div class="tile tile_pink">
+            <div class="tile tile_pink tile_vehicle">
               <h3 class="tile__title">Техника</h3>
               <a href="#" class="tile__link link">Для стройки</a>
             </div>
@@ -104,25 +117,33 @@
         <div class="row">
           <div class="col col-8">
             <div class="slider">
-              <button class="slider__control slider__control_prev">Назад</button>
-              <div class="slider__item" hidden>
+              <button class="slider__control slider__control_prev" aria-label="Назад"></button>
+              <div class="slider__item" hidden style="background-image: url(img/top-slider-2.jpg);">
                 <div class="slider__item-head">
                   <h3 class="slider__item-title">Перфораторы</h3>
                   <div class="slider__item-subtitle">Настоящие мужские игрушки</div>
                 </div>
               </div>
-              <div class="slider__item">
+              <div class="slider__item" style="background-image: url(img/top-slider-1.jpg);">
                 <h3 class="slider__item-title">Дрели</h3>
                 <div class="slider__item-subtitle">Соседям на радость</div>
               </div>
-              <a href="catalog.html" class="slider__link link">Открыть каталог</a>
-              <button class="slider__control slider__control_next">Вперёд</button>
+              <a href="catalog.html" class="btn slider__link link">Открыть каталог</a>
+              <button class="slider__control slider__control_next" aria-label="Вперёд"></button>
+              <ul class="slider__nav reseted-list">
+                <li class="slider__nav-item">
+                  <button type="button" class="slider__nav-item-btn" aria-label="Слайд №1"></button>
+                </li>
+                <li class="slider__nav-item">
+                  <button type="button" class="slider__nav-item-btn active" aria-label="Слайд №2"></button>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="col col-4">
             <div class="row">
               <div class="col col-12">
-                <div class="tile tile_green">
+                <div class="tile tile_green tile_sale">
                   <h3 class="tile__title">Скидки 50%</h3>
                   <a href="#" class="tile__link link">на 350 товаров</a>
                 </div>
@@ -130,7 +151,7 @@
             </div>
             <div class="row">
               <div class="col col-12">
-                <div class="tile tile_orange">
+                <div class="tile tile_orange tile_delivery">
                   <h3 class="tile__title">Доставка</h3>
                   <a href="#" class="tile__link link">Бесплатно</a>
                 </div>
@@ -144,11 +165,11 @@
           <div class="col col-12">
             <div class="block-header">
               <h2 class="block-header__title">Популярные товары:</h2>
-              <a href="#" class="block-header__link link">Все популярные товары</a>
+              <a href="#" class="btn block-header__link link">Все популярные товары</a>
             </div>
           </div>
         </div>
-        <ul class="row reseted-list">
+        <ul class="row reseted-list product-list">
           <li class="col col-3">
             <article class="product">
               <h4 class="product__title">
@@ -201,7 +222,7 @@
             </article>
           </li>
           <li class="col col-3">
-            <article class="product">
+            <article class="product product_new">
               <h4 class="product__title">
                 <a href="#" class="link">Перфоратор BOSCH BFG 2000</a>
               </h4>
@@ -224,7 +245,7 @@
           <div class="col col-12">
             <div class="block-header">
               <h2 class="block-header__title">Популярные производители:</h2>
-              <a href="#" class="block-header__link link">Все производители</a>
+              <a href="#" class="btn block-header__link link">Все производители</a>
             </div>
 
           </div>
@@ -277,17 +298,19 @@
       <div class="container">
         <h2 class="site-block__title">Сервисы</h2>
         <div class="site-block__content">
-          <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
-          <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами! <br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
         <div class="row tabs tabs_horizontal">
-          <ul class="col col-4 tabs__labels">
-            <li>Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
-          </ul>
-          <div class="col col-8 tabs__content">
-            <div class="tabs__item">
+          <div class="col col-3">
+            <ul class="tabs__labels reseted-list">
+              <li><a href="#delivery" class="active link">Доставка</a></li>
+              <li><a href="#garanty" class="link">Гарантия</a></li>
+              <li><a href="#credit" class="link">Кредит</a></li>
+            </ul>
+          </div>
+          <div class="col col-8 col-offset-1 tabs__content">
+            <div class="tabs__item active" id="delivery">
               <h3 class="tabs__item-title">Доставка</h3>
               <div class="tabs__item-content">
                 <p>Мы с удовольствием доставим ваш товар прямо
@@ -296,7 +319,7 @@
                   поднимая его на ваш этаж!</p>
               </div>
             </div>
-            <div class="tabs__item">
+            <div class="tabs__item" id="garanty">
               <h3 class="tabs__item-title">Гарантия</h3>
               <div class="tabs__item-content">
                 <p>Если купленный у нас товар поломается или заискрит,
@@ -305,7 +328,7 @@
                   Дом уж восстановите как-нибудь сами.</p>
               </div>
             </div>
-            <div class="tabs__item">
+            <div class="tabs__item" id="credit">
               <h3 class="tabs__item-title">Кредит</h3>
               <div class="tabs__item-content">
                 <p>Залезть в долговую яму стало проще!
@@ -326,14 +349,15 @@
               <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не
                 оставит
                 равнодушными любителей сэкономить на гастарбайтерах.</p>
-              <p>Мы можем доставить ваш товар в самые отдаленные точки России!</p>
-              <p>Техномарт работает со многими транспортными компаниями: </p>
-              <ul class="site-list">
+              <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
+                Техномарт работает со многими транспортными компаниями:
+              </p>
+              <ul class="site-list reseted-list">
                 <li>Деловые линии</li>
                 <li>Автотрейдинг</li>
                 <li>ЖелДорЭкспедиция</li>
               </ul>
-              <a href="#" class="link">Подробнее о компании</a>
+              <a href="#" class="btn btn_w_220 link">Подробнее о компании</a>
             </div>
           </section>
           <section class="col col-4 col-offset-1">
@@ -347,7 +371,7 @@
                 <img src="img/map-placeholder.png"
                   alt="Адрес нашего офиса: г.Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="300" height="158">
               </a>
-              <a href="#" class="link">Заблудились? Напишите нам!</a>
+              <a href="#" class="btn link">Заблудились? Напишите нам!</a>
             </div>
           </section>
         </div>
@@ -358,17 +382,17 @@
     <div class="container">
       <div class="row">
         <div class="col col-3">
-          <a href="#" class="logo footer__logo link">
+          <a href="#" class="site-logo footer__logo link">
             <img src="img/logo-technomart.svg" alt="Логотип 'Техномарт'" width="108" height="18">
           </a>
         </div>
         <nav class="col col-9 site-footer__nav">
-          <ul>
-            <li><a href="#" class="link">Компания</a></li>
-            <li><a href="#" class="link">Новости</a></li>
-            <li><a href="catalog.html" class="link">Каталог</a></li>
-            <li><a href="#" class="link">Доставка</a></li>
-            <li><a href="#" class="link">Контакты</a></li>
+          <ul class="reseted-list">
+            <li><a href="#" class="site-footer__nav-link link">Компания</a></li>
+            <li><a href="#" class="site-footer__nav-link link">Новости</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link link">Каталог</a></li>
+            <li><a href="#" class="site-footer__nav-link link">Доставка</a></li>
+            <li><a href="#" class="site-footer__nav-link link">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -378,74 +402,85 @@
           <a href="tel:8812555-05-55" class="link">+7 (812) 555-05-55</a>
         </div>
         <nav class="col col-7 site-footer__nav">
-          <ul>
-            <li><a href="#" class="link link_accent">Материалы</a></li>
-            <li><a href="#" class="link link_accent">Техника</a></li>
-            <li><a href="#" class="link link_accent">Инструменты</a></li>
-            <li><a href="#" class="link link_accent">Спецпредложения</a></li>
+          <ul class="reseted-list">
+            <li><a href="#" class="site-footer__nav-link link link_accent">Материалы</a></li>
+            <li><a href="#" class="site-footer__nav-link link link_accent">Техника</a></li>
+            <li><a href="#" class="site-footer__nav-link link link_accent">Инструменты</a></li>
+            <li><a href="#" class="site-footer__nav-link link link_accent">Спецпредложения</a></li>
           </ul>
         </nav>
       </div>
-      <div class="row site-footer__copyright">
-        <div class="col col-4">
-          <p>
-            © 2010–2019 Компания «Техномарт»
-          </p>
-          <p>
-            Все права защищены
-          </p>
-        </div>
-        <ul class="col col-4">
-          <li><a href="#" class="link">Вконтакте</a></li>
-          <li><a href="#" class="link">Фэйсбук</a></li>
-          <li><a href="#" class="link">Инстаграм</a>
-          </li>
-        </ul>
-        <div class="col col-2">
-          <p>
-            Обратная связь:
-          </p>
-          <p>
-            <a href="mailto:mail@htmlacademy.ru" class="link link_accent">mail@htmlacademy.ru</a>
-          </p>
-        </div>
-        <div class="col col-2">
-          <p>
-            Разработано —
-          </p>
-          <p>
-            <a href="https://htmlacademy.ru/intensive/htmlcss" class="link link_accent">htmlacademy.ru</a>
-          </p>
+    </div>
+    <div class="site-footer__copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col col-4">
+            <p>
+              © 2010–2019 Компания «Техномарт»
+            </p>
+            <p>
+              Все права защищены
+            </p>
+          </div>
+          <div class="col col-4">
+            <ul class="reseted-list social">
+              <li><a href="#" class="link social__vk"><span class="visually-hidden">Вконтакте</span></a></li>
+              <li><a href="#" class="link social__facebook"><span class="visually-hidden">Фэйсбук</span></a></li>
+              <li><a href="#" class="link social__instagram"><span class="visually-hidden">Инстаграм</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col col-2">
+            <p>
+              Обратная связь:
+            </p>
+            <p>
+              <a href="mailto:mail@htmlacademy.ru" class="link link_accent">mail@htmlacademy.ru</a>
+            </p>
+          </div>
+          <div class="col col-2">
+            <p>
+              Разработано —
+            </p>
+            <p>
+              <a href="https://htmlacademy.ru/intensive/htmlcss" class="link link_accent">htmlacademy.ru</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </footer>
-  <!-- <div> -->
-  <!-- <button type="button">Закрыть</button>
-    <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-  </div>
-  <div>
-    <button type="button">Закрыть</button>
-    <div>
-      <form action="#" method="POST">
-        <label>
-          Ваше имя:
-          <input type="text" name="fio" placeholder="Имя Фамилия">
-        </label>
-        <label>
-          Ваш e-mail:
-          <input type="email" name="email" placeholder="email@example.com"
-            pattern="[A-aZ-z]{1,}[@][A-aZ-z]{1,}[.][A-aZ-z]{1,}" required>
-        </label>
-        <label>
-          Текст письма:
-          <textarea name="message" cols="30" rows="10"></textarea>
-        </label>
-        <div>
-          <button type="submit">Отправить</button>
+  <div class="popup popup_bordered">
+      <button type="button" class="popup__close" aria-label="Закрыть"></button>
+      <form action="#" method="POST" class="contact-form">
+        <div class="popup__body">
+          <fieldset class="contact-form__group">
+            <legend class="visually-hidden">Контактные данные</legend>
+            <label>
+              Ваше имя:
+              <input type="text" name="fio" placeholder="Имя Фамилия">
+            </label>
+            <label>
+              Ваш e-mail:
+              <input type="email" name="email" placeholder="email@example.com"
+                pattern="[A-aZ-z]{1,}[@][A-aZ-z]{1,}[.][A-aZ-z]{1,}" required>
+            </label>
+          </fieldset>
+          <fieldset>
+            <label>
+              Текст письма:
+              <textarea name="message" cols="30" rows="10"></textarea>
+            </label>
+          </fieldset>
         </div>
-      </form>
+          <div class="popup__footer">
+            <button type="submit" class="btn">Отправить</button>
+          </div>
+        </form>
     </div>
+  <!-- <div>
+    <button type="button">Закрыть</button>
+    <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
   </div> -->
 </body>
 

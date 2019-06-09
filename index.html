@@ -454,34 +454,34 @@
       <button type="button" class="popup__close" aria-label="Закрыть"></button>
       <form action="#" method="POST" class="contact-form">
         <div class="popup__body">
-          <fieldset class="contact-form__group">
+          <div class="contact-form__group">
             <legend class="visually-hidden">Контактные данные</legend>
-            <label>
+            <label class="contact-form__group-col-2">
               Ваше имя:
               <input type="text" name="fio" placeholder="Имя Фамилия">
             </label>
-            <label>
+            <label class="contact-form__group-col-2">
               Ваш e-mail:
               <input type="email" name="email" placeholder="email@example.com"
                 pattern="[A-aZ-z]{1,}[@][A-aZ-z]{1,}[.][A-aZ-z]{1,}" required>
             </label>
-          </fieldset>
-          <fieldset>
+          </div>
+          <div class="contact-form__group">
             <label>
               Текст письма:
-              <textarea name="message" cols="30" rows="10"></textarea>
+              <textarea name="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
             </label>
-          </fieldset>
+          </div>
         </div>
           <div class="popup__footer">
-            <button type="submit" class="btn">Отправить</button>
+            <button type="submit" class="btn btn_fluid">Отправить</button>
           </div>
         </form>
     </div>
-  <!-- <div>
-    <button type="button">Закрыть</button>
-    <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-  </div> -->
+  <div class="popup popup_fluid">
+      <button type="button" class="popup__close" aria-label="Закрыть"></button>
+      <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+  </div>
 </body>
 
 </html>

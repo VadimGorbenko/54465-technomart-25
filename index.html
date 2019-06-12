@@ -112,24 +112,26 @@
           <div class="grid__row">
             <div class="grid__item grid__item_8 slider">
               <button class="slider__control slider__control_prev" aria-label="Назад"></button>
-              <div class="slider__item" hidden style="background-image: url(img/top-slider-2.jpg);">
-                <div class="slider__item-head">
-                  <h3 class="slider__item-title">Перфораторы</h3>
-                  <div class="slider__item-subtitle">Настоящие мужские игрушки</div>
+              <div class="slider__items">
+                <div class="slider__item active" style="background-image: url(img/top-slider-2.jpg);">
+                  <div class="slider__item-head">
+                    <h3 class="slider__item-title">Перфораторы</h3>
+                    <div class="slider__item-subtitle">Настоящие мужские игрушки</div>
+                  </div>
                 </div>
-              </div>
-              <div class="slider__item" style="background-image: url(img/top-slider-1.jpg);">
-                <h3 class="slider__item-title">Дрели</h3>
-                <div class="slider__item-subtitle">Соседям на радость</div>
+                <div class="slider__item" style="background-image: url(img/top-slider-1.jpg);">
+                  <h3 class="slider__item-title">Дрели</h3>
+                  <div class="slider__item-subtitle">Соседям на радость</div>
+                </div>
               </div>
               <a href="catalog.html" class="btn slider__link link">Открыть каталог</a>
               <button class="slider__control slider__control_next" aria-label="Вперёд"></button>
               <ul class="slider__nav reseted-list">
                 <li class="slider__nav-item">
-                  <button type="button" class="slider__nav-item-btn" aria-label="Слайд №1"></button>
+                  <button type="button" class="slider__nav-item-btn active" aria-label="Слайд №1"></button>
                 </li>
                 <li class="slider__nav-item">
-                  <button type="button" class="slider__nav-item-btn active" aria-label="Слайд №2"></button>
+                  <button type="button" class="slider__nav-item-btn" aria-label="Слайд №2"></button>
                 </li>
               </ul>
             </div>
@@ -281,9 +283,9 @@
         <div class="row tabs tabs_horizontal">
           <div class="col col-3">
             <ul class="tabs__labels reseted-list">
-              <li><a href="#delivery" class="active link">Доставка</a></li>
-              <li><a href="#garanty" class="link">Гарантия</a></li>
-              <li><a href="#credit" class="link">Кредит</a></li>
+              <li><button type="button" class="tabs__labels-item active">Доставка</button></li>
+              <li><button type="button" class="tabs__labels-item ">Гарантия</button></li>
+              <li><button type="button" class="tabs__labels-item ">Кредит</button></li>
             </ul>
           </div>
           <div class="col col-8 col-offset-1 tabs__content">
@@ -310,7 +312,7 @@
               <div class="tabs__item-content">
                 <p>Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.</p>
-                <a href="credit-form.html" class="link">Отправить заявку</a>
+                <a href="credit-form.html" class="link btn btn_light">Отправить заявку</a>
               </div>
             </div>
           </div>
@@ -346,9 +348,9 @@
               <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323075%2C59.938533&amp;mode=search&amp;sll=38.975313%2C45.033340&amp;sspn=0.246506%2C0.099081&amp;text=%D0%B3.%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB.%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%2C%20%D0%B4.%2019&amp;z=18.2"
                 class="link">
                 <img src="img/map-placeholder.png"
-                  alt="Адрес нашего офиса: г.Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="300" height="158">
+                  alt="Адрес нашего офиса: г.Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="300" height="158" class="js-show-modal" data-modal-target="js-map-popup">
               </a>
-              <a href="contacts.html" class="btn link">Заблудились? Напишите нам!</a>
+              <a href="contacts.html" class="btn link js-show-modal" data-modal-target="js-contacts-popup">Заблудились? Напишите нам!</a>
             </div>
           </section>
         </div>
@@ -427,7 +429,7 @@
       </div>
     </div>
   </footer>
-  <div class="popup popup_bordered" style="display: none">
+  <div class="popup popup_bordered js-contacts-popup">
     <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
     <form action="#" method="POST" class="contact-form">
       <div class="popup__body">
@@ -454,10 +456,22 @@
       </div>
     </form>
   </div>
-  <div class="popup popup_fluid" style="display: none">
+  <div class="popup popup_fluid js-map-popup">
     <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
     <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
   </div>
+  <div class="popup popup_bordered js-add-product-popup">
+      <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
+      <div class="popup__body">
+        <div class="done-mark"></div>
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="popup__footer">
+        <a href="order.html" class="link btn btn_w_220">Оформить заказ</a>
+        <button type="button" class="btn btn_w_220 btn_neutral js-popup_close">Продолжить покупки</button>
+      </div>
+    </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

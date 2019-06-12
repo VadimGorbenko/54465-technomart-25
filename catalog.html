@@ -39,9 +39,9 @@
         </a>
         <!-- </div> -->
         <!-- <div class="col col-2"> -->
-        <a href="cart.html" class="activity-control activity-control_cart link">
+        <a href="cart.html" class="activity-control activity-control_cart active link">
           <span>Корзина: </span>
-          <span>0</span>
+          <span>10</span>
         </a>
         <!-- </div> -->
         <!-- <div class="col col-2"> -->
@@ -123,18 +123,22 @@
                 <legend>Цена:</legend>
                 <div class="price-filter-group">
                   <div class="range">
-                    <input type="range" name="price" min="0" max="99999" value="30000">
+                    <div class="range__path">
+                      <div class="range__path_current"></div>
+                      <button class="range__handle range__handle_min" type="button"></button>
+                      <button class="range__handle range__handle_max" type="button"></button>
+                    </div>
                   </div>
                   <div class="price">
                     <label>
                       <span class="visually-hidden">Цена от</span>
                       <input type="text" name="price__min" placeholder="От" value="0">
                     </label>
+                    -
                     <label>
                       <span class="visually-hidden">Цена до</span>
                       <input type="text" name="price__max" placeholder="До" value="30000">
                     </label>
-                    -
                   </div>
                 </div>
               </fieldset>
@@ -257,7 +261,7 @@
                 </article>
               </li>
               <li class="col col-4">
-                <article class="product">
+                <article class="product product_new">
                   <h4 class="product__title">
                     <a href="#" class="link">Перфоратор BOSCH BFG 2000</a>
                   </h4>
@@ -291,7 +295,7 @@
                 </article>
               </li>
               <li class="col col-4">
-                <article class="product">
+                <article class="product product_new">
                   <h4 class="product__title">
                     <a href="#" class="link">Перфоратор BOSCH BFG 6000</a>
                   </h4>
@@ -325,7 +329,7 @@
                 </article>
               </li>
               <li class="col col-4">
-                <article class="product">
+                <article class="product product_new">
                   <h4 class="product__title">
                     <a href="#" class="link">Перфоратор BOSCH BFG 3000</a>
                   </h4>
@@ -479,7 +483,7 @@
       </div>
     </div>
   </footer>
-  <div class="popup popup_bordered">
+  <div class="popup popup_bordered js-add-product-popup">
     <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
     <div class="popup__body">
       <div class="done-mark"></div>
@@ -490,6 +494,7 @@
       <button type="button" class="btn btn_w_220 btn_neutral js-popup_close">Продолжить покупки</button>
     </div>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

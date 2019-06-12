@@ -1441,15 +1441,15 @@ address {
   background-position: right top;
 }
 
-#delivery {
+.delivery {
   background-image: url('../img/delivery-bg.png');
 }
 
-#garanty {
+.garanty {
   background-image: url('../img/guarantee-bg.png');
 }
 
-#credit {
+.credit {
   background-image: url('../img/credit-bg.png');
 }
 
@@ -1742,6 +1742,10 @@ address {
   background-color: #f4f4f4;
   min-height: 115px;
   padding: 35px 80px;
+}
+
+.popup__footer .btn:not(:first-child) {
+  margin-left: 20px;
 }
 
 .done-mark {

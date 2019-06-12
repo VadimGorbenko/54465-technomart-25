@@ -28,7 +28,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
               <path fill="currentColor"
                 d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
-              </svg>
+            </svg>
           </button>
         </form>
         <!-- </div> -->
@@ -70,7 +70,7 @@
                 <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z" />
                 <path fill="#c5c5c5"
                   d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" />
-                </svg>
+              </svg>
               Войти
             </a>
             <a href="sign-up.html" class="sign sign_up link">Регистрация</a>
@@ -94,29 +94,23 @@
     <section class="site-block">
       <div class="container">
         <h2 class="visually-hidden">Основные направления</h2>
-        <div class="row">
-          <div class="col col-4">
-            <div class="tile tile_orange tile_materials tile_new">
+        <div class="grid">
+          <div class="grid__row">
+            <div class="grid__item grid__item_4 tile tile_orange tile_materials tile_new">
               <h3 class="tile__title">Материалы</h3>
               <a href="#" class="tile__link link">На любой вкус</a>
             </div>
-          </div>
-          <div class="col col-4">
-            <div class="tile tile_blue tile_tools">
+            <div class="grid__item grid__item_4 tile tile_blue tile_tools">
               <h3 class="tile__title">Инструмент</h3>
               <a href="#" class="tile__link link">На все случаи</a>
             </div>
-          </div>
-          <div class="col col-4">
-            <div class="tile tile_pink tile_vehicle">
+            <div class="grid__item grid__item_4 tile tile_pink tile_vehicle">
               <h3 class="tile__title">Техника</h3>
               <a href="#" class="tile__link link">Для стройки</a>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col col-8">
-            <div class="slider">
+          <div class="grid__row">
+            <div class="grid__item grid__item_8 slider">
               <button class="slider__control slider__control_prev" aria-label="Назад"></button>
               <div class="slider__item" hidden style="background-image: url(img/top-slider-2.jpg);">
                 <div class="slider__item-head">
@@ -139,35 +133,23 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="col col-4">
-            <div class="row">
-              <div class="col col-12">
-                <div class="tile tile_green tile_sale">
-                  <h3 class="tile__title">Скидки 50%</h3>
-                  <a href="#" class="tile__link link">на 350 товаров</a>
-                </div>
+            <div class="grid__col grid__col_4">
+              <div class="grid__item tile tile_green tile_sale">
+                <h3 class="tile__title">Скидки 50%</h3>
+                <a href="#" class="tile__link link">на 350 товаров</a>
               </div>
-            </div>
-            <div class="row">
-              <div class="col col-12">
-                <div class="tile tile_orange tile_delivery">
-                  <h3 class="tile__title">Доставка</h3>
-                  <a href="#" class="tile__link link">Бесплатно</a>
-                </div>
+              <div class="grid__item tile tile_orange tile_delivery">
+                <h3 class="tile__title">Доставка</h3>
+                <a href="#" class="tile__link link">Бесплатно</a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="container">
-        <div class="row">
-          <div class="col col-12">
-            <div class="block-header">
-              <h2 class="block-header__title">Популярные товары:</h2>
-              <a href="#" class="btn block-header__link link">Все популярные товары</a>
-            </div>
-          </div>
+        <div class="block-header">
+          <h2 class="block-header__title">Популярные товары:</h2>
+          <a href="#" class="btn block-header__link link">Все популярные товары</a>
         </div>
         <ul class="row reseted-list product-list">
           <li class="col col-3">
@@ -241,14 +223,9 @@
         </ul>
       </div>
       <div class="container">
-        <div class="row">
-          <div class="col col-12">
-            <div class="block-header">
-              <h2 class="block-header__title">Популярные производители:</h2>
-              <a href="#" class="btn block-header__link link">Все производители</a>
-            </div>
-
-          </div>
+        <div class="block-header">
+          <h2 class="block-header__title">Популярные производители:</h2>
+          <a href="#" class="btn block-header__link link">Все производители</a>
         </div>
         <ul class="row reseted-list">
           <li class="col col-3">
@@ -450,36 +427,36 @@
       </div>
     </div>
   </footer>
-  <div class="popup popup_bordered">
-      <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
-      <form action="#" method="POST" class="contact-form">
-        <div class="popup__body">
-          <div class="contact-form__group">
-            <label class="contact-form__group-col-2">
-              Ваше имя:
-              <input type="text" name="fio" placeholder="Имя Фамилия">
-            </label>
-            <label class="contact-form__group-col-2">
-              Ваш e-mail:
-              <input type="email" name="email" placeholder="email@example.com"
-                pattern="[A-aZ-z]{1,}[@][A-aZ-z]{1,}[.][A-aZ-z]{1,}" required>
-            </label>
-          </div>
-          <div class="contact-form__group">
-            <label>
-              Текст письма:
-              <textarea name="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
-            </label>
-          </div>
+  <div class="popup popup_bordered" style="display: none">
+    <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
+    <form action="#" method="POST" class="contact-form">
+      <div class="popup__body">
+        <div class="contact-form__group">
+          <label class="contact-form__group-col-2">
+            Ваше имя:
+            <input type="text" name="fio" placeholder="Имя Фамилия">
+          </label>
+          <label class="contact-form__group-col-2">
+            Ваш e-mail:
+            <input type="email" name="email" placeholder="email@example.com"
+              pattern="[A-aZ-z]{1,}[@][A-aZ-z]{1,}[.][A-aZ-z]{1,}" required>
+          </label>
         </div>
-          <div class="popup__footer">
-            <button type="submit" class="btn btn_fluid">Отправить</button>
-          </div>
-        </form>
-    </div>
-  <div class="popup popup_fluid">
-      <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
-      <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <div class="contact-form__group">
+          <label>
+            Текст письма:
+            <textarea name="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+          </label>
+        </div>
+      </div>
+      <div class="popup__footer">
+        <button type="submit" class="btn btn_fluid">Отправить</button>
+      </div>
+    </form>
+  </div>
+  <div class="popup popup_fluid" style="display: none">
+    <button type="button" class="popup__close js-popup_close" aria-label="Закрыть"></button>
+    <img src="img/full-map.png" width="940" height="445" alt="Наш адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
   </div>
 </body>
 

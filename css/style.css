@@ -918,10 +918,6 @@ address {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.row:not(:first-of-type) {
-  /* margin-top: 20px; */
-}
-
 .slider__item {
   background-color: lightgray;
   height: 100%;
@@ -1103,17 +1099,10 @@ address {
   font-size: 17px;
   line-height: 18px;
   margin-top: auto;
-  /* width: 100%; */
-  /* max-width: 100%; */
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-}
-
-.product__price p {
-  /* margin: 0; */
 }
 
 .product__price-old {
@@ -1458,14 +1447,6 @@ address {
 
 .site-footer__nav li {
   margin: 0 30px;
-}
-
-.site-footer__nav li:first-child {
-  /* margin-left: 0; */
-}
-
-.site-footer__nav li:last-child {
-  /* margin-right: 0; */
 }
 
 .site-footer__nav-link:hover,

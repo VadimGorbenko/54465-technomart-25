@@ -83,8 +83,22 @@ document.querySelectorAll('.js-popup_close').forEach(function (element) {
 
 function showModal(event) {
   event.preventDefault();
-  var target = this.dataset.modalTarget;
-  document.querySelector('.' + target).classList.add('active');
+  var targetSelector = this.dataset.modalTarget;
+  var target = document.querySelector('.' + targetSelector);
+  target.classList.add('active');
+  if (targetSelector === 'js-map-popup') {
+    if (!target.querySelector('ymaps')) {
+      var MAP_MIN_HEIGHT = 445;
+      target.style.minHeight = MAP_MIN_HEIGHT + "px";
+      var map = document.createElement('script');
+      map.type = 'text/javascript';
+      map.charset = 'utf-8';
+      map.async = true;
+      map.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A66e4f10fc1b670a8297b3c6a5ec5f919ecb2caf8caf50183e601b8a7d77742f5&amp;width=100%&amp;height=" + MAP_MIN_HEIGHT + "&amp;lang=ru_RU&amp;scroll=true";
+      target.querySelector('.js-map-placeholder').remove();
+      target.appendChild(map);
+    }
+  };
 }
 
 function closeModal(event) {

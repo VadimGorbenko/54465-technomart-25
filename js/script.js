@@ -7,6 +7,7 @@
     var prevBtn = slider.querySelector('.slider__control_prev');
     var sliderNav = slider.querySelector('.slider__nav');
     var navBtns = sliderNav.querySelectorAll('.slider__nav-item-btn');
+    navBtns = Array.prototype.slice.call(navBtns);
 
     nextBtn.addEventListener('click', changeSlideByArrow);
     prevBtn.addEventListener('click', changeSlideByArrow);
@@ -47,6 +48,7 @@
   if (tabs) {
     var labelsList = document.querySelector('.tabs__labels');
     var labels = labelsList.querySelectorAll('.tabs__labels-item');
+    labels = Array.prototype.slice.call(labels);
 
     labels.forEach(function (label) {
       label.addEventListener('click', changeTab);
@@ -73,11 +75,15 @@ function findThisIndex(parent, element, elementsSelector) {
   return -1;
 }
 
-document.querySelectorAll('.js-show-modal').forEach(function (element) {
+var moddalTriggers = document.querySelectorAll('.js-show-modal');
+moddalTriggers = Array.prototype.slice.call(moddalTriggers);
+moddalTriggers.forEach(function (element) {
   element.addEventListener('click', showModal)
 });
 
-document.querySelectorAll('.js-popup_close').forEach(function (element) {
+var closeBtns = document.querySelectorAll('.js-popup_close');
+closeBtns = Array.prototype.slice.call(closeBtns);
+closeBtns.forEach(function (element) {
   element.addEventListener('click', closeModal)
 });
 
@@ -95,7 +101,9 @@ function showModal(event) {
       map.charset = 'utf-8';
       map.async = true;
       map.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A66e4f10fc1b670a8297b3c6a5ec5f919ecb2caf8caf50183e601b8a7d77742f5&amp;width=100%&amp;height=" + MAP_MIN_HEIGHT + "&amp;lang=ru_RU&amp;scroll=true";
-      target.querySelector('.js-map-placeholder').remove();
+      map.onload = function removeStatic() {
+        target.querySelector('.js-map-placeholder').remove();
+      }
       target.appendChild(map);
     }
   };
@@ -128,7 +136,9 @@ function clicksHandler(event) {
     if (isAnyPopupOpened && !event.target.classList.contains('js-show-modal')) {
       var isOutOfPopup = findParent(event.target, 'popup') === document.querySelector('body') ? true : false;
       if (isOutOfPopup) {
-        document.querySelectorAll('.popup').forEach(function (popup) {
+        var popups = document.querySelectorAll('.popup.active');
+        popups = Array.prototype.slice.call(popups);
+        popups.forEach(function (popup) {
           popup.classList.remove('active');
         })
       }

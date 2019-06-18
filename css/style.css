@@ -48,7 +48,7 @@
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
 }
 
@@ -56,7 +56,7 @@ html {
 ::before,
 ::after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -66,7 +66,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   min-width: 960px;
   min-height: 100vh;
   margin: 0;
@@ -98,8 +98,8 @@ address {
 input,
 textarea {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .reseted-list {
@@ -154,7 +154,7 @@ textarea {
   margin: 0;
 }
 
-.site-block__content p+p {
+.site-block__content p + p {
   margin-top: 20px;
 }
 
@@ -248,7 +248,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 20px auto;
   padding: 0;
 
@@ -314,25 +314,25 @@ textarea {
 
 .site-input:focus-within {
   outline: 1px solid #c5c5c5;
-  outline-offset:5px;
+  outline-offset: 5px;
 }
 
 .site-input__input {
   position: absolute;
 
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .site-input__mark {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
   position: relative;
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
+
+  display: flex;
+  align-items: center;
+  min-height: 25px;
+  padding-left: 35px;
+
   opacity: 0.8;
 }
 
@@ -340,60 +340,66 @@ textarea {
 .site-input__mark::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   z-index: 10;
+
   display: block;
   width: 25px;
   height: 25px;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 
-.site-input__input[disabled]+.site-input__mark {
+.site-input__input[disabled] + .site-input__mark {
   opacity: 0.3;
 }
 
-.site-input:hover .site-input__input:not([disabled])+.site-input__mark,
-.site-input__input:focus+.site-input__mark {
+.site-input__input:not([disabled]):hover + .site-input__mark,
+.site-input__input:focus + .site-input__mark {
   opacity: 1;
 }
 
-.site-input__input+.site-input__mark::after {
+.site-input__input + .site-input__mark::after {
   display: none;
 }
 
-.site-input__input:checked+.site-input__mark::before {
+.site-input__input:checked + .site-input__mark::before {
   display: none;
 }
 
-.site-input__input:checked+.site-input__mark::after {
+.site-input__input:checked + .site-input__mark::after {
   display: block;
 }
 
-.site-input__input[type=checkbox]+.site-input__mark::before {
+.site-input__input[type=checkbox] + .site-input__mark::before {
+  top: 50%;
+
   width: 21px;
   height: 21px;
-  top: 50%;
-  transform: translateY(-50%);
+
   background-image: url(../img/checkbox-off.svg);
+  transform: translateY(-50%);
 }
 
-.site-input__input[type=checkbox]+.site-input__mark::after {
+.site-input__input[type=checkbox] + .site-input__mark::after {
+  top: 50%;
+  left: 0;
+
   width: 25px;
   height: 21px;
-  top: 50%;
-  left: 0px;
-  transform: translateY(-50%);
+
   background-image: url(../img/checkbox-on.svg);
+  transform: translateY(-50%);
 }
 
-.site-input__input[type=radio]+.site-input__mark::before {
+.site-input__input[type=radio] + .site-input__mark::before {
   background-image: url(../img/radio-off.svg);
 }
 
-.site-input__input[type=radio]+.site-input__mark::after {
+.site-input__input[type=radio] + .site-input__mark::after {
   background-image: url(../img/radio-on.svg);
 }
 
@@ -402,7 +408,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px;
 }
@@ -412,7 +418,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   margin: 10px 0;
 }
@@ -439,7 +445,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   margin: 0 10px;
 }
@@ -478,7 +484,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px;
 }
@@ -600,8 +606,8 @@ textarea {
   border-radius: 0;
 
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .search-inline__input::-webkit-input-placeholder {
@@ -655,11 +661,11 @@ textarea {
   border: 0;
 }
 
-.search-inline__input:hover+.search-inline__submit {
+.search-inline__input:hover + .search-inline__submit {
   color: #ffffff;
 }
 
-.search-inline__input:focus+.search-inline__submit {
+.search-inline__input:focus + .search-inline__submit {
   color: #ee3643;
 }
 
@@ -670,7 +676,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -981,7 +987,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1058,8 +1064,8 @@ textarea {
 
   background-color: #ff5357;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .tile__title {
@@ -1142,6 +1148,7 @@ textarea {
   position: absolute;
   bottom: 20px;
   left: 25px;
+
   min-width: 195px;
 }
 
@@ -1157,8 +1164,8 @@ textarea {
   background-color: transparent;
   border: 0;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .slider .btn {
@@ -1167,6 +1174,7 @@ textarea {
 
 .slider__control.slider__control_prev {
   left: 20px;
+
   background-image: url(../img/icon-left.svg);
 }
 
@@ -1180,14 +1188,16 @@ textarea {
   position: absolute;
   bottom: 28px;
   left: 50%;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
+
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slider__nav-item {
@@ -1197,7 +1207,7 @@ textarea {
 .slider__nav-item-btn {
   display: block;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   width: 6px;
   height: 6px;
   padding: 0;
@@ -1280,7 +1290,7 @@ textarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1292,10 +1302,10 @@ textarea {
   border: 1px solid #eaeaea;
 
   -webkit-transition: -webkit-box-shadow 0.2s linear;
-  -o-transition: box-shadow 0.2s linear;
-  transition: -webkit-box-shadow 0.2s linear;
-  transition: box-shadow 0.2s linear;
-  transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
+       -o-transition:         box-shadow 0.2s linear;
+          transition: -webkit-box-shadow 0.2s linear;
+          transition:         box-shadow 0.2s linear;
+          transition:         box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
 }
 
 .product__image {
@@ -1325,7 +1335,7 @@ textarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1359,7 +1369,8 @@ textarea {
 
   color: #ffffff;
 
-  background-image: url(../img/red-button.svg);
+  background-color: #ee3643;
+  background: url(../img/red-button.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-origin: border-box;
@@ -1378,7 +1389,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1397,21 +1408,21 @@ textarea {
 
   background-color: #ffffff;
   -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
   opacity: 0;
 
   -webkit-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+       -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
 }
 
 .product:hover .product__actions,
 .product:focus .product__actions,
 .product__actions:focus-within {
   -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+      -ms-transform: none;
+          transform: none;
   opacity: 1;
 }
 
@@ -1478,7 +1489,7 @@ textarea {
 .manufacturer:focus {
   outline: 0;
   -webkit-box-shadow: 0 4px 20px -3px gray;
-  box-shadow: 0 4px 20px -3px gray;
+          box-shadow: 0 4px 20px -3px gray;
 }
 
 .product__actions-buy:hover,
@@ -1496,8 +1507,8 @@ textarea {
   background-color: #518534;
   border-bottom-color: transparent;
   -webkit-transform: translateY(2px);
-  -ms-transform: translateY(2px);
-  transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .product__actions-bookmark:hover,
@@ -1528,8 +1539,8 @@ textarea {
 
   background-color: #ee3643;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .manufacturers-list {
@@ -1554,15 +1565,15 @@ textarea {
   border: 1px solid #eaeaea;
 
   -webkit-transition: -webkit-box-shadow 0.2s linear;
-  -o-transition: box-shadow 0.2s linear;
-  transition: -webkit-box-shadow 0.2s linear;
-  transition: box-shadow 0.2s linear;
-  transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
+       -o-transition:         box-shadow 0.2s linear;
+          transition: -webkit-box-shadow 0.2s linear;
+          transition:         box-shadow 0.2s linear;
+          transition:         box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
 }
 
 .manufacturer:active {
   -webkit-box-shadow: 0 2px 6px 0 #000000;
-  box-shadow: 0 2px 6px 0 #000000;
+          box-shadow: 0 2px 6px 0 #000000;
   opacity: 0.3;
 }
 
@@ -1590,7 +1601,7 @@ textarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1768,7 +1779,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
@@ -1818,7 +1829,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 -20px;
 }
 
@@ -1964,7 +1975,7 @@ textarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   -webkit-box-align: start;
@@ -2097,7 +2108,7 @@ textarea {
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0 1px 4px -1px gray;
-  box-shadow: 0 1px 4px -1px gray;
+          box-shadow: 0 1px 4px -1px gray;
 
   -webkit-appearance: none;
 }
@@ -2115,24 +2126,24 @@ textarea {
   background-color: #ababab;
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .range__handle_min {
   left: 0;
 
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .range__handle_max {
   left: 85%;
 
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .filter-form input[type=submit] {
@@ -2282,7 +2293,7 @@ textarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2293,14 +2304,14 @@ textarea {
 
   background-color: #ffffff;
   -webkit-box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.4);
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 
   -webkit-transition: top 0.3s ease-in-out;
-  -o-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out;
+       -o-transition: top 0.3s ease-in-out;
+          transition: top 0.3s ease-in-out;
 }
 
 .popup.active {
@@ -2325,7 +2336,7 @@ textarea {
   height: 20px;
 
   background-color: transparent;
-  background-image: url(../img/icon-close.svg);
+  background: url(../img/icon-close.svg);
   background-repeat: no-repeat;
   border: 0;
   cursor: pointer;
@@ -2336,7 +2347,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2407,7 +2418,7 @@ textarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   width: 100%;
   margin: 10px;
 
